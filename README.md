@@ -9,16 +9,15 @@
 2. ensure we are connected to the internet
     - `nmcli device wifi connect <wifi-name> password <password>`
 2. install via archinstall scripts with the base config 
-    - `curl/wget`
+    - `curl https://github.com/cablecreek/.SYSTEM_CONFIG/blob/main/archinstall_base.json -O`
     - `archinstall --config archinstall_base.json`
     - unsure you have configured:
-        1. `Authentication` - root and 1 other super user
+        1. `Authentication` - add root and 1 other super user
         2. `Disk configuration` - partitions, etc.
         3. And any locality based options (it is configured for Perth, Australia...)
-5. reboot
+5. reboot into the 
 6. clone this repo into home 
-7. ``
-
+    - `git clone https://github.com/cablecreek/.SYSTEM_CONFIG ~/`
 
 ## Decisions
 tmux vs zelij
@@ -52,6 +51,4 @@ hyperpolkitagent
 # Inspired by 
 - [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
 - [omarchy](https://github.com/basecamp/omarchy?tab=readme-ov-file)
-
-# License
 
