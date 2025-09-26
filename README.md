@@ -45,11 +45,12 @@ Host github.com
 - `rm -rf ~/.config/hypr` needs to run post archscript install 
 
 # Pending Decisions
+-[] telescope vs fzf-lua
 -[] sddm alternative
 -[] md viewer
 -[] what to do with new package installs?
     - i.e. add to list or yolo pacman?
--[] telescope vs fzf-lua
+
 # Decisions
 - markdown viewer ()
 - settings manager (systemsettings)
