@@ -42,15 +42,14 @@ Host github.com
 5. test `ssh -T git@github.com`
 
 # BUGS
+- `rm -rf ~/.config/hypr` needs to run post archscript install 
 
 # Pending Decisions
--[] tmux vs zelij
--[] btop vs htop
+-[] sddm alternative
+-[] md viewer
 -[] what to do with new package installs?
     - i.e. add to list or yolo pacman?
--[] ssdm?
--[]md viewer
-
+-[] telescope vs fzf-lua
 # Decisions
 - markdown viewer ()
 - settings manager (systemsettings)
@@ -67,6 +66,10 @@ Host github.com
 - text editor (nvim)
 - disk utils (gnome-disk-utility)
 - wallpaper (hyprpaper)
+
+Excluded:
+- tmux, zelij, ghostty configured (splits)
+    - seems overkill with hyprland
 
 # Stuff to remember
 - udiskie adds external drives to: `/run/media/<usr>/`

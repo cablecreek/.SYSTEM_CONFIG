@@ -1,5 +1,4 @@
 # Dynamic theme colors
-# config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 theme = TokyoNight
 
 # Font
@@ -8,8 +7,6 @@ theme = TokyoNight
 font-size = 14
 
 # Window
-window-padding-x = 14
-window-padding-y = 14
 confirm-close-surface=false
 resize-overlay = never
 
@@ -18,3 +15,12 @@ cursor-style = "block"
 cursor-style-blink = false
 shell-integration-features = no-cursor
 
+# # split
+# keybind = ctrl+shift+right=new_split:right
+# keybind = ctrl+shift+down=new_split:down
+# #
+# # navigation
+# keybind = ctrl+shift+h=goto_split:left
+# keybind = ctrl+shift+j=goto_split:bottom
+# keybind = ctrl+shift+k=goto_split:top
+# keybind = ctrl+shift+l=goto_split:right

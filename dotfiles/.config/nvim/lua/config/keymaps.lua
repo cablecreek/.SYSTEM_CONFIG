@@ -6,7 +6,12 @@ set('n', '<left>', '')
 set('n', '<right>', '')
 set('n', '<down>', '')
 
--- keep tabbing...
+-------------------------------------------------------------------------------
+-- move lines when highlighted and indent (really nice with harpoon reordering)
+set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'move highlighted' })
+set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'move highlighted' })
+
+-- keep tabbing (v mode)
 vim.api.nvim_set_keymap('v', '<', '<gv', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '>', '>gv', { noremap = true, silent = true })
 
@@ -61,22 +66,22 @@ end, { desc = '[G]oto [D]efinition [V]ertical Split' })
 -------------------------------------------------------------------------------
 --- search and replace
 -------------------------------------------------------------------------------
---
--- -- Replace all - word that you are currently on
--- set('n', '<leader>r', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'in file [s]earch [r]eplace' })
---
--- -- Forward incremental replace - word that you are currently on (one at a time)
--- -- period "." to repeat action
--- set('n', '<leader>rf', '*``cgn', { desc = '[s]earch replace [f]orward' })
---
--- -- Backward incremental replace - word that you are currently on (one at a time)
--- -- period "." to repeat action
--- set('n', '<leader>rb', '#``cgN', { desc = '[s]earch replace [b]ackward' })
---
--- -- Visual mode partial word selection (one at a time)
--- -- period "." to repeat action
--- -- map same as forward inc. replace as action is the same
--- set('x', '<leader>rf', [[y/\V<C-R>=escape(@",'/\')<CR><CR>Ncgn]], { desc = '[s]earch replace [f]orward' })
+
+-- Replace all - word that you are currently on
+set('n', '<leader>r', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'in file [s]earch [r]eplace' })
+
+-- Forward incremental replace - word that you are currently on (one at a time)
+-- period "." to repeat action
+set('n', '<leader>rf', '*``cgn', { desc = '[s]earch replace [f]orward' })
+
+-- Backward incremental replace - word that you are currently on (one at a time)
+-- period "." to repeat action
+set('n', '<leader>rb', '#``cgN', { desc = '[s]earch replace [b]ackward' })
+
+-- Visual mode partial word selection (one at a time)
+-- period "." to repeat action
+-- map same as forward inc. replace as action is the same
+set('x', '<leader>rf', [[y/\V<C-R>=escape(@",'/\')<CR><CR>Ncgn]], { desc = '[s]earch replace [f]orward' })
 
 -------------------------------------------------------------------------------
 --- misc

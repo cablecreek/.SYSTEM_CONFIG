@@ -12,3 +12,5 @@ zsh
 nvidia-open 
 nvidia-utils
 tree
+btop
+fzf

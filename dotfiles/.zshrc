@@ -17,3 +17,5 @@ alias npm="pnpm"
 # open man pages in nvim
 export MANPAGER='nvim +Man!'
 
+# starship for nicer prompt
+eval "$(starship init zsh)"
