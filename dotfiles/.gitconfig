@@ -1,2 +1,5 @@
 [init]
 	defaultBranch = main
+
+[include]
+    path = ~/.USER_CONFIG/gitconfig

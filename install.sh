@@ -1,8 +1,12 @@
 #!/bin/bash
 
 DIR=~/.SYSTEM_CONFIG
-TEST_MSG="hello from git script"
+USER_DIR=~/.USER_CONFIG
 
+echo "the following will be used to configure git"
+
+read -p "email: " EMAIL 
+read -p "full name: " FULL_NAME
 
 set -o pipefail
 
