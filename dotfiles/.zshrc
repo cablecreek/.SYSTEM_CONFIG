@@ -10,7 +10,8 @@ setopt SHARE_HISTORY
 
 # alias
 alias vim="nvim"
-alias l="ls -al"
+alias l="ls -al --color=auto"
+alias npm="pnpm"
 
 # misc
 # open man pages in nvim

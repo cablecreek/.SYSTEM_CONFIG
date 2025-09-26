@@ -3,6 +3,12 @@
 DIR=~/.SYSTEM_CONFIG
 cd $DIR/dotfiles
 
-# target root and replace (allows for refreshing)
-stow -t ~ -R *
+# remove existing configs
+rm -rf ~/.config/hypr
+
+# target root and replace all
+stow -target ~ -restow .
+
+# change to zsh
+chsh -s /bin/zsh
 

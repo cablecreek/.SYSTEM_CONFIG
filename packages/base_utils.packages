@@ -8,3 +8,7 @@ wireplumber
 pavucontrol
 pamixer
 base-devel
+zsh
+nvidia-open 
+nvidia-utils
+tree

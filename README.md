@@ -1,29 +1,31 @@
 # Arch System Configs
 **EXPECT BREAKING CHANGES** 
 
-- archinstall script with a hyperland desktop
-- stow for dotfile symlinks 
-
 # Installation
 1. Boot into the fresh Arch iso
-2. ensure we are connected to the internet
+2. connect internet
+    - `iwctl`
+    - `station wlan0 connecy <wifi name>`
+2. follow `archinstall`
+3. reboot into the new install
+4. connected to wifi 
     - `nmcli device wifi connect <wifi-name> password <password>`
-2. install via archinstall scripts with the base config 
-    - `curl https://github.com/cablecreek/.SYSTEM_CONFIG/blob/main/archinstall_base.json -O`
-    - `archinstall --config archinstall_base.json`
-    - unsure you have configured:
-        1. `Authentication` - add root and 1 other super user
-        2. `Disk configuration` - partitions, etc.
-        3. And any locality based options (it is configured for Perth, Australia...)
-5. reboot into the 
-6. clone this repo into home 
+5. clone this repo into home 
     - `git clone https://github.com/cablecreek/.SYSTEM_CONFIG ~/`
+6. `sh install.sh`
 
-## Decisions
-tmux vs zelij
-btop vs htop
-what to do with new package installs?
+
+# BUGS
+
+# Pending Decisions
+-[] tmux vs zelij
+-[] btop vs htop
+-[] what to do with new package installs?
     - i.e. add to list or yolo pacman?
+-[] ssdm?
+
+# Stuff to remember
+- udiskie adds external drives to: `/run/media/<usr>/`
 
 ## may not be needed?
 hyperpolkitagent
@@ -47,6 +49,13 @@ hyperpolkitagent
 # tweaks
 - fonts
 - themes
+
+# MultiOS/Multi-Partion
+- use `systemd-boot` its robust and simple
+- want to rename an entry? 
+    - `/boot/loader/entries`
+- increase auto-boot time?
+    - `/boot/loader/loader.conf`
 
 # Inspired by 
 - [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
