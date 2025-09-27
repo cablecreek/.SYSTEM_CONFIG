@@ -45,10 +45,9 @@ Host github.com
 - `rm -rf ~/.config/hypr` needs to run post archscript install 
 
 # Pending Decisions
--[] telescope vs fzf-lua
--[] sddm alternative
--[] md viewer
--[] what to do with new package installs?
+- telescope vs fzf-lua
+- themes
+- what to do with new package installs?
     - i.e. add to list or yolo pacman?
 
 # Decisions
@@ -72,7 +71,7 @@ Excluded:
 - tmux, zelij, ghostty configured (splits)
     - seems overkill with hyprland
 
-# Stuff to remember
+# FYI
 - udiskie adds external drives to: `/run/media/<usr>/`
 
 

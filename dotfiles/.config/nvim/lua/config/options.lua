@@ -70,3 +70,6 @@ vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'v:lua.vim.lsp.foldexpr()'
 vim.opt.foldenable = false -- Disable by default; toggle with `zi`
 vim.opt.foldlevel = 99 -- Start unfolded
+
+-- required by obsidian
+vim.opt_local.conceallevel = 1
