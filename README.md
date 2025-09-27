@@ -81,6 +81,11 @@ Excluded:
 - increase auto-boot time?
     - `/boot/loader/loader.conf`
 
+**troubleshooting**
+- `sudo cfdisk /dev/nvme0n1` for resizing and fixing partitions
+- `lsblk -f` - for uuid info
+
+
 # Inspired by 
 - [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
 - [omarchy](https://github.com/basecamp/omarchy?tab=readme-ov-file)
