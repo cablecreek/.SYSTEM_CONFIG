@@ -51,7 +51,6 @@ Host github.com
     - i.e. add to list or yolo pacman?
 
 # Decisions
-- markdown viewer ()
 - settings manager (systemsettings)
 - network (network-manager-applet)
 - bluetooth (blueberry)
