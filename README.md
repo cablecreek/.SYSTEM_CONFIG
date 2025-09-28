@@ -41,6 +41,21 @@ Host github.com
 ```
 5. test `ssh -T git@github.com`
 
+
+
+**troubleshooting**
+1. did you clone https or ssh?
+    - `git remote -v` 
+    - is it `https` or `git@github`, https and ssh respectively?
+    - `git remote set-url origin <ssh-gh-url>`
+
+2. permissions issue? make sure they are set correctly
+```sh
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/config
+chmod 600 ~/.ssh/github_ed25519.pub
+```
+
 # BUGS
 - `rm -rf ~/.config/hypr` needs to run post archscript install 
 
