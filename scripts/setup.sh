@@ -3,6 +3,12 @@
 DIR=~/.SYSTEM_CONFIG
 cd $DIR/dotfiles
 
+
+# stuff already installed
+rm ~/.bashrc ~/.bash_logout ~/.bash_profile
+rm ~/.gitconfig
+rm -rf ~/.config/hypr 
+
 # target root and replace all
 stow -t ~ -R .
 
