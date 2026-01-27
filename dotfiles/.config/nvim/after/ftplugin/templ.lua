@@ -1,3 +1,7 @@
+-- vim.bo.tabstop = 2
+-- vim.bo.shiftwidth = 2
+-- vim.bo.expandtab = true
+
 --BUG: templ comments
 --still doesnt seem to work
 --

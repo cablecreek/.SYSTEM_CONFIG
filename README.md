@@ -1,6 +1,12 @@
 # Arch System Configs
 **EXPECT BREAKING CHANGES** 
 
+Concepts:
+- keybindings need to work well between environmments
+    - hyprland: `<SUPER> <KEY>`
+    - Application: `<CTR> <KEY>`
+    - eg. close window: `<SUPER> W`, zen browser `<CTR> W`, nvim `<CTR> W + <key>`
+
 # Installation
 1. Boot into the fresh Arch iso
 2. connect internet
@@ -13,6 +19,8 @@
 5. clone this repo into home 
     - `git clone https://github.com/cablecreek/.SYSTEM_CONFIG ~/`
 6. `sh install.sh`
+
+
 
 # Optional
 ## Connect to Github
@@ -55,7 +63,6 @@ chmod 700 ~/.ssh
 chmod 600 ~/.ssh/config
 chmod 600 ~/.ssh/github_ed25519.pub
 ```
-
 # BUGS
 - `rm -rf ~/.config/hypr` needs to run post archscript install 
 
@@ -80,6 +87,7 @@ chmod 600 ~/.ssh/github_ed25519.pub
 - text editor (nvim)
 - disk utils (gnome-disk-utility)
 - wallpaper (hyprpaper)
+- openrgb for hardware leds
 
 Excluded:
 - tmux, zelij, ghostty configured (splits)
@@ -87,7 +95,8 @@ Excluded:
 
 # FYI
 - udiskie adds external drives to: `/run/media/<usr>/`
-
+- list running hyperland clients - `hyprctl clients`
+    - essential for windowrules!
 
 # MultiOS/Multi-Partion
 - use `systemd-boot` its robust and simple
@@ -99,6 +108,7 @@ Excluded:
 **troubleshooting**
 - `sudo cfdisk /dev/nvme0n1` for resizing and fixing partitions
 - `lsblk -f` - for uuid info
+
 
 
 # Inspired by 

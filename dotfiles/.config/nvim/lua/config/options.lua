@@ -65,10 +65,10 @@ vim.o.scrolloff = 10
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
--- folding - use the built in lsp methods
+-- folding
 vim.opt.foldmethod = 'expr'
-vim.opt.foldexpr = 'v:lua.vim.lsp.foldexpr()'
-vim.opt.foldenable = false -- Disable by default; toggle with `zi`
+vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.opt.foldenable = true -- Enable folding
 vim.opt.foldlevel = 99 -- Start unfolded
 
 -- required by obsidian

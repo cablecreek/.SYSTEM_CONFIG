@@ -3,3 +3,6 @@ npm
 cargo
 luarocks
 lua
+ipython
+python-pip
+python-pipenv

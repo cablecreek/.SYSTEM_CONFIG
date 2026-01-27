@@ -179,6 +179,7 @@ return {
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
       gopls = {},
+      golangci_lint_ls = {},
       tailwindcss = {},
       templ = {},
       terraformls = {},
@@ -191,6 +192,7 @@ return {
       -- nil_ls = {},
       astro = {},
       markdown_oxide = {},
+      jsonls = {},
 
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --

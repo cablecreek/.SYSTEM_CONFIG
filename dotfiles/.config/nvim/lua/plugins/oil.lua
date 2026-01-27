@@ -24,5 +24,20 @@ return {
       show_hidden = true,
     },
     watch_for_changes = true,
+    preview_split = 'auto',
+    confirmation = {
+      border = 'rounded',
+      win_options = {
+        winblend = 0,
+        winhighlight = 'Normal:NormalFloat,FloatBorder:FloatBorder',
+      },
+    },
+    float = {
+      border = 'rounded', -- or "single", "double", etc.
+      win_options = {
+        winblend = 0,
+        winhighlight = 'Normal:NormalFloat,FloatBorder:FloatBorder',
+      },
+    },
   },
 }

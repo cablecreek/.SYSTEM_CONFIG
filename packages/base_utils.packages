@@ -14,3 +14,7 @@ nvidia-utils
 tree
 btop
 fzf
+rsync
+go-task
+python-debugpy
+bind-tool

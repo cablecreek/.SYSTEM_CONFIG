@@ -21,7 +21,7 @@ return {
       -- },
       {
         name = 'work',
-        path = '~/vaults/work',
+        path = '~/ObsidianVaults/work',
       },
     },
 

@@ -18,3 +18,5 @@ kvantum
 gtk2 
 gtk3
 gtk4
+libappindicator-gtk3 
+libdbusmenu-gtk3

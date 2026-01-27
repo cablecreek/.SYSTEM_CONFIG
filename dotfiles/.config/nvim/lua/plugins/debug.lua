@@ -23,6 +23,7 @@ return {
 
     -- Add your own debuggers here
     'leoluz/nvim-dap-go',
+    'mfussenegger/nvim-dap-python',
   },
   keys = {
     -- Basic debugging keymaps, feel free to change to your liking!
@@ -144,5 +145,34 @@ return {
         detached = vim.fn.has 'win32' == 0,
       },
     }
+
+    local function get_pipenv_python()
+      -- First check if pipenv is available
+      local pipenv_check = io.popen('which pipenv 2>/dev/null')
+      if pipenv_check then
+        local pipenv_path = pipenv_check:read('*a')
+        pipenv_check:close()
+        
+        -- If pipenv is available, try to get the Python path from it
+        if pipenv_path and pipenv_path:gsub('%s+', '') ~= '' then
+          local handle = io.popen('pipenv --py 2>/dev/null')
+          if handle then
+            local result = handle:read('*a')
+            handle:close()
+            local python_path = result:gsub('%s+', '')
+            -- Only return if we got a valid path
+            if python_path and python_path ~= '' then
+              return python_path
+            end
+          end
+        end
+      end
+      
+      -- Fallback to system Python
+      return vim.fn.exepath('python3') or vim.fn.exepath('python')
+    end
+
+    require('dap-python').setup(get_pipenv_python())
+
   end,
 }

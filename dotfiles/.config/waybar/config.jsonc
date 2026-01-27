@@ -4,14 +4,19 @@
   "position": "top",
   "spacing": 0,
   "height": 26,
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["clock"],
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
   "modules-right": [
+    "tray",
+    "insync",
     "bluetooth",
     "network",
     "wireplumber",
   ],
-
   "hyprland/workspaces": {
     "on-click": "activate",
     "format": "{icon}",
@@ -36,15 +41,23 @@
       "7": [],
     }
   },
-
   "clock": {
     "format": "{:%d %A  %H:%M}",
     "tooltip": false,
   },
-
-  //TODO: 
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10,
+    "show-passive-items": true // Helps with hidden icons
+  },
   "network": {
-    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
     "format": "{icon}",
     "format-wifi": "{icon}",
     "format-ethernet": "󰀂",
@@ -63,7 +76,6 @@
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "blueberry"
   },
-
   "wireplumber": {
     "format": "{icon}",
     "on-click": "pavucontrol",
@@ -72,8 +84,11 @@
     "scroll-step": 5,
     "format-muted": "",
     "format-icons": {
-      "default": ["", "", ""]
+      "default": [
+        "",
+        "",
+        ""
+      ]
     }
   },
-
 }
