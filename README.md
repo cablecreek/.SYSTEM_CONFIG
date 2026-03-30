@@ -75,7 +75,7 @@ chmod 600 ~/.ssh/github_ed25519.pub
 - settings manager (systemsettings)
 - network (network-manager-applet)
 - bluetooth (blueberry)
-- file manager (dolphin)
+- file manager (nautilus)
 - terminal(ghostty)
 - volume control (pavucontrol)
 - notifications (mako)
