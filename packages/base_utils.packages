@@ -18,3 +18,6 @@ rsync
 go-task
 python-debugpy
 bind-tool
+graphviz
+keychain
+vi

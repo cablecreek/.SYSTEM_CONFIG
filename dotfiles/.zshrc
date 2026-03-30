@@ -1,7 +1,3 @@
-# plugins
-#source ~/Downloads/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-# source ~/Downloads/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
-
 # History settings
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -34,3 +30,14 @@ eval "$(starship init zsh)"
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# opencode
+export PATH=/home/cablecreek/.opencode/bin:$PATH
+
+# add github key to ssh agent
+# eval "$(keychain --eval --quiet ~/.ssh/github_ed25519)"
+
+# Start the SSH agent if it's not already running, but don't load any keys yet
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    eval "$(ssh-agent -s)" > /dev/null
+fi

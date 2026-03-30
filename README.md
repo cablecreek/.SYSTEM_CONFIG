@@ -1,6 +1,5 @@
 # Arch System Configs
-**EXPECT BREAKING CHANGES** 
-
+this is my arch config, don't expect huge relability... 
 Concepts:
 - keybindings need to work well between environmments
     - hyprland: `<SUPER> <KEY>`

@@ -42,6 +42,7 @@ vim.keymap.set('n', '<C-Left>', ':vertical resize -5<CR>')
 vim.keymap.set('n', '<C-Right>', ':vertical resize +5<CR>')
 vim.keymap.set('n', '<C-Up>', ':resize -5<CR>') -- horizontal shrink
 vim.keymap.set('n', '<C-Down>', ':resize +5<CR>') -- horizontal grow
+
 -- TODO:
 -- if current word == that in the last search
 -- true ->  n
@@ -93,7 +94,15 @@ set('x', '<leader>rf', [[y/\V<C-R>=escape(@",'/\')<CR><CR>Ncgn]], { desc = '[s]e
 -------------------------------------------------------------------------------
 set('n', '<leader>u', '<cmd>UndotreeToggle<cr>', { desc = '[u]ndo tree' })
 
-vim.keymap.set('n', '<leader>so', function()
-  vim.cmd('source ' .. vim.fn.stdpath 'config' .. '/init.lua')
-  print 'nvim reloaded'
-end, { desc = 'Reload Neovim config' })
+-------------------------------------------------------------------------------
+--- nvim plugin dev
+-------------------------------------------------------------------------------
+
+-- source current file
+set('n', '<leader>x', function()
+  vim.cmd 'source %'
+end, { desc = 'Source current file' })
+
+set('n', '<leader>z', function()
+  vim.cmd 'PlenaryBustedFile %'
+end, { desc = 'test current file with Plenary' })
