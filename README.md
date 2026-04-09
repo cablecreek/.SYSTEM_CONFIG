@@ -65,12 +65,6 @@ chmod 600 ~/.ssh/github_ed25519.pub
 # BUGS
 - `rm -rf ~/.config/hypr` needs to run post archscript install 
 
-# Pending Decisions
-- telescope vs fzf-lua
-- themes
-- what to do with new package installs?
-    - i.e. add to list or yolo pacman?
-
 # Decisions
 - settings manager (systemsettings)
 - network (network-manager-applet)
