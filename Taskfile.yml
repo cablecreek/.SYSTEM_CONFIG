@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: "3"
+
+tasks:
+  default:
+    desc: list all commands
+    cmds:
+      - task -l
+  push:
+    desc: git push repo & subtrees
+    cmds:
+      - git push
+      - git subtree push --prefix=dotfiles/.config/nvim nvim main

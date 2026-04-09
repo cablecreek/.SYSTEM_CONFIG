@@ -6,7 +6,7 @@ Concepts:
     - Application: `<CTR> <KEY>`
     - eg. close window: `<SUPER> W`, zen browser `<CTR> W`, nvim `<CTR> W + <key>`
 
-# Installation
+## Installation
 1. Boot into the fresh Arch iso
 2. connect internet
     - `iwctl`
@@ -19,10 +19,28 @@ Concepts:
     - `git clone https://github.com/cablecreek/.SYSTEM_CONFIG ~/`
 6. `sh install.sh`
 
+## nvim 
+> [!IMPORTANT]
+> the nvim config has been added as a `git subtree` - this allows for the nvim repo to be independent
+> additional commands are needed for `push` and `pull` for  the `subtree`
+> use `task push` 
 
+- push update to nvim repo: 
+    - `git subtree push --prefix=dotfiles/.config/nvim nvim main`
+    - i.e. its executing -> `git subtree push --prefix <dir> <remote> <branch>`
+- pull: 
+    - `git subtree pull --prefix=dotfiles/.config/nvim nvim main --squash`
+    - i.e. `git subtree pull --prefix <dir> <remote> <branch> --squash`
+- [nvim repo](https://github.com/cablecreek/nvim)
+- The following was executed for the nvim git subtree setup
+```sh
+git remote add nvim git@github.com:cablecreek/nvim.git
+git subtree add --prefix=dotfiles/.config/nvim nvim main --squash
+git push
+```
 
-# Optional
-## Connect to Github
+## Optional
+### Connect to Github
 1. run:
 ```sh
 # generate a new key
@@ -48,8 +66,6 @@ Host github.com
 ```
 5. test `ssh -T git@github.com`
 
-
-
 **troubleshooting**
 1. did you clone https or ssh?
     - `git remote -v` 
@@ -62,10 +78,8 @@ chmod 700 ~/.ssh
 chmod 600 ~/.ssh/config
 chmod 600 ~/.ssh/github_ed25519.pub
 ```
-# BUGS
-- `rm -rf ~/.config/hypr` needs to run post archscript install 
 
-# Decisions
+## Decisions
 - settings manager (systemsettings)
 - network (network-manager-applet)
 - bluetooth (blueberry)
@@ -81,17 +95,16 @@ chmod 600 ~/.ssh/github_ed25519.pub
 - disk utils (gnome-disk-utility)
 - wallpaper (hyprpaper)
 - openrgb for hardware leds
-
 Excluded:
 - tmux, zelij, ghostty configured (splits)
     - seems overkill with hyprland
 
-# FYI
+## FYI
 - udiskie adds external drives to: `/run/media/<usr>/`
 - list running hyperland clients - `hyprctl clients`
     - essential for windowrules!
 
-# MultiOS/Multi-Partion
+## MultiOS/Multi-Partion
 - use `systemd-boot` its robust and simple
 - want to rename an entry? 
     - `/boot/loader/entries`
@@ -102,9 +115,10 @@ Excluded:
 - `sudo cfdisk /dev/nvme0n1` for resizing and fixing partitions
 - `lsblk -f` - for uuid info
 
+## BUGS
+- `rm -rf ~/.config/hypr` needs to run post archscript install 
 
-
-# Inspired by 
+## Inspired by 
 - [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
 - [omarchy](https://github.com/basecamp/omarchy?tab=readme-ov-file)
 
