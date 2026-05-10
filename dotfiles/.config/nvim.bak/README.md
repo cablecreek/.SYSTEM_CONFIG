@@ -1,7 +1,5 @@
 # nvim config
 
-`NVIM_APPNAME=<nvim-dir> nvim`
-
 ## TODO
 - [ ] check and refine deps list
 - [ ] keymaps are a mess

@@ -1,3 +1,5 @@
+bindkey -v
+
 # History settings
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -31,8 +33,7 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# opencode
-export PATH=/home/cablecreek/.opencode/bin:$PATH
+export PATH="/home/cablecreek/.duckdb/cli/latest":$PATH
 
 # add github key to ssh agent
 # eval "$(keychain --eval --quiet ~/.ssh/github_ed25519)"
